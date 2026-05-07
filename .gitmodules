@@ -30,3 +30,6 @@
 [submodule "docs"]
 	path = docs
 	url = https://github.com/antmicro/usb-test-suite-docs
+[submodule "usb_cdc"]
+	path = usb_cdc
+	url = git@github.com:ulixxe/usb_cdc.git
