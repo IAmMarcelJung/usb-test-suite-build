@@ -10,31 +10,30 @@ Documentation for this project is hosted at [Read the Docs](https://usb-test-sui
 
 ## Setup
 
-It is recommended that you use a virtualenv or similar tool.
-This will be taken care of by the `setup.sh` script.
+The setup was changed from the purely python based setup with an installation script to a nix-based setup.
 
 ### Prerequisites
 
-* python3
-* pip
-* iverilog
+* [Nix](https://nixos.org/download/) with flakes enabled
 
 ### Steps
 
 ```
-# Install dependencies
-sudo apt install python3 python3-pip iverilog
-# Clone the repository.
+# Clone the repository
 git clone https://github.com/antmicro/usb-test-suite-build.git
 cd usb-test-suite-build
-# Run script to setup environment
-./setup.sh
+
+# Initialize submodules
+git submodule update --init --recursive
+
+# Enter the development environment
+nix develop
 ```
 
 ## Usage
 
 Use the Makefile in **usb-test-suite-testbenches** folder to choose the IP core and test module.
-Currently we support testing:
+Currently, we support testing:
 
 * [ValentyUSB](https://github.com/im-tomu/valentyusb)
 * [Foboot](https://github.com/im-tomu/foboot)
@@ -42,11 +41,12 @@ Currently we support testing:
 * [tnt's USB IP core](https://github.com/smunaut/ice40-playground/tree/master/cores/usb)
 * [TinyFPGA-Bootloader](https://github.com/tinyfpga/TinyFPGA-Bootloader)
 
+Newly added:
+* [USB_CDC](https://github.com/ulixxe/usb_cdc)
+
 Execute tests by calling:
 
 ```
-# Make sure you are in the virtualenv
-. env/bin/activate
 cd usb-test-suite-testbenches
 # Execute tests with default values
 make sim
