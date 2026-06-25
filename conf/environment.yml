@@ -1,9 +1,0 @@
-name: usb-test-suite-env
-channels:
-    - conda-forge
-    - symbiflow
-dependencies:
-    - python=3.7
-    - libzip
-    - sigrok-cli
-    - iverilog

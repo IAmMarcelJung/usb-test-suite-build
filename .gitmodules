@@ -3,10 +3,10 @@
 	url = https://github.com/enjoy-digital/litex.git
 [submodule "usb-test-suite-testbenches"]
 	path = usb-test-suite-testbenches
-	url = https://github.com/antmicro/usb-test-suite-testbenches.git
+	url = https://github.com/IAmMarcelJung/usb-test-suite-testbenches
 [submodule "usb-test-suite-cocotb-usb"]
 	path = usb-test-suite-cocotb-usb
-	url = https://github.com/antmicro/usb-test-suite-cocotb-usb.git
+	url = https://github.com/IAmMarcelJung/usb-test-suite-cocotb-usb
 [submodule "valentyusb"]
 	path = valentyusb
 	url = https://github.com/im-tomu/valentyusb.git
@@ -24,9 +24,9 @@
 	path = ice40-playground
 	url = https://github.com/smunaut/ice40-playground.git
 	branch = usb
-[submodule "yosys"]
-	path = yosys
-	url = https://github.com/YosysHQ/yosys.git
 [submodule "docs"]
 	path = docs
 	url = https://github.com/antmicro/usb-test-suite-docs
+[submodule "usb_cdc"]
+	path = usb_cdc
+	url = git@github.com:ulixxe/usb_cdc.git
